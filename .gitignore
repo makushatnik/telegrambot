@@ -1,0 +1,5 @@
+log.txt
+env
+venv
+__pycache__
+.idea
