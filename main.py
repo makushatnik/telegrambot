@@ -56,13 +56,6 @@ def main():
     bot = telebot.TeleBot(TOKEN, parse_mode=None)
     log('Bot started at: %s' % datetime.now().strftime(DATETIME_FORMAT))
 
-    # @bot.message_handler(content_types=['text'])
-    # def get_text_messages(message):
-    #     log('Received message: \'%s\' at %s' % (message.text, datetime.now().strftime(DATETIME_FORMAT)))
-    #     if message.text == '/hello':
-    #         bot.send_message(message.from_user.id, hello_world())
-    #     else:
-    #         bot.send_message(message.from_user.id, INCORRECT_COMMAND)
     @bot.message_handler(commands=["hello-world"])
     def get_hello_message(message):
         log('Received message: \'%s\' at %s' % (message.text, datetime.now().strftime(DATETIME_FORMAT)))
